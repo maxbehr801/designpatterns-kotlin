@@ -1,7 +1,9 @@
 package info.maxbehr.designpatternskotlin.creational.builder
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.Test
+import assertk.assertThat
+import assertk.assertions.isEqualTo
+import assertk.assertions.isNull
+import kotlin.test.Test
 
 class BuilderTest {
 
@@ -14,6 +16,6 @@ class BuilderTest {
 
         assertThat(component.param1).isEqualTo("some value")
         assertThat(component.param2).isNull()
-        assertThat(component.param3).isTrue()
+        assertThat(component.param3).isEqualTo(true)
     }
 }

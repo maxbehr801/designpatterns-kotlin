@@ -5,15 +5,16 @@ plugins {
 group = "info.maxbehr"
 version = "1.0-SNAPSHOT"
 
-val junit5Version = "5.7.1"
 val assertjVersion = "3.12.2"
+val assertkVersion = "0.28.0"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation("org.assertj:assertj-core:$assertjVersion")
+//    testImplementation("org.assertj:assertj-core:$assertjVersion")
+    testImplementation("com.willowtreeapps.assertk:assertk:$assertkVersion")
     testImplementation(kotlin("test"))
 }
 

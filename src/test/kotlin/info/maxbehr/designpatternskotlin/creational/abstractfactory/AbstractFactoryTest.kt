@@ -1,7 +1,8 @@
 package info.maxbehr.designpatternskotlin.creational.abstractfactory
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.Test
+import assertk.assertThat
+import assertk.assertions.isInstanceOf
+import kotlin.test.Test
 
 class AbstractFactoryTest {
 

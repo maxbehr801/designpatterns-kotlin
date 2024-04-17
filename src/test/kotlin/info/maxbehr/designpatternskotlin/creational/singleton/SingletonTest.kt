@@ -1,8 +1,9 @@
 package info.maxbehr.designpatternskotlin.creational.singleton
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.Test
-
+import assertk.assertThat
+import assertk.assertions.isEqualTo
+import assertk.assertions.isSameInstanceAs
+import kotlin.test.Test
 
 class SingletonTest {
 
@@ -11,8 +12,8 @@ class SingletonTest {
         val firstInstance = Singleton.showYourself()
         val secondInstance = Singleton.showYourself()
         assertThat(firstInstance.hashCode()).isEqualTo(secondInstance.hashCode())
-        assertThat(firstInstance).isSameAs(Singleton)
-        assertThat(secondInstance).isSameAs(Singleton)
+        assertThat(firstInstance).isSameInstanceAs(Singleton)
+        assertThat(secondInstance).isSameInstanceAs(Singleton)
     }
 }
 
